@@ -53,9 +53,6 @@
   </d-front-matter>
 
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
-    <!-- Header -->
-    {% include header.liquid %}
-
     <!-- Content -->
     <div class="post distill">
       <d-title>
@@ -121,9 +118,6 @@
         {% endif %}
       </d-article>
     </div>
-
-    <!-- Footer -->
-    {% include footer.liquid %}
 
     <!-- JavaScripts -->
     {% include distill_scripts.liquid %}

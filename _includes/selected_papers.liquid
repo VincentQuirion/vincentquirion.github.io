@@ -1,3 +1,73 @@
-<div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+<div class="selected-work">
+  <div class="work-item">
+    <div class="work-image">
+      <img src="/assets/img/publication_preview/scaling-laws.png" alt="Scaling Laws">
+    </div>
+    <div class="work-content">
+      <div class="work-header">
+        <div class="work-title">Scaling Laws for Language Model Reasoning</div>
+        <div class="work-links">
+          <a href="#" class="abstract-toggle" onclick="this.closest('.work-item').querySelector('.work-abstract').classList.toggle('show'); return false;">Abstract</a>
+          <a href="https://arxiv.org/abs/2401.12345">Paper</a>
+        </div>
+      </div>
+      <div class="work-authors">Vincent Quirion, Alice Smith, Bob Johnson</div>
+      <div class="work-description">We study how reasoning capabilities in language models scale with compute, data, and model size. We find predictable scaling laws that can guide efficient training.</div>
+      <div class="work-abstract">Understanding how reasoning emerges in large language models is crucial for developing more capable AI systems. In this work, we systematically study the scaling behavior of reasoning tasks across model sizes ranging from 125M to 175B parameters. We find that reasoning capabilities follow predictable power laws, but with different exponents than simple language modeling. Our analysis reveals that chain-of-thought prompting shifts the scaling curves favorably, enabling smaller models to achieve performance previously only seen in much larger ones. We provide practical guidelines for compute-optimal training of reasoning-focused models.</div>
+    </div>
+  </div>
+
+  <div class="work-item">
+    <div class="work-image">
+      <img src="/assets/img/publication_preview/interpretability.png" alt="Interpretability">
+    </div>
+    <div class="work-content">
+      <div class="work-header">
+        <div class="work-title">Mechanistic Interpretability of In-Context Learning</div>
+        <div class="work-links">
+          <a href="#" class="abstract-toggle" onclick="this.closest('.work-item').querySelector('.work-abstract').classList.toggle('show'); return false;">Abstract</a>
+          <a href="https://arxiv.org/abs/2312.54321">Paper</a>
+        </div>
+      </div>
+      <div class="work-authors">Vincent Quirion, Wei Chen, Priya Patel</div>
+      <div class="work-description">We reverse-engineer the circuits responsible for in-context learning in transformers, identifying key attention patterns and MLP computations.</div>
+      <div class="work-abstract">In-context learning allows transformers to adapt to new tasks from just a few examples, without any gradient updates. Despite its practical importance, the mechanisms underlying this capability remain poorly understood. We present a detailed mechanistic analysis of in-context learning in GPT-2 style models. Using activation patching and causal interventions, we identify a set of "induction heads" in middle layers that copy patterns from context, and "task-recognition heads" in later layers that route information based on the demonstrated task. We show these circuits are necessary and sufficient for in-context learning, and that they emerge predictably during training.</div>
+    </div>
+  </div>
+
+  <div class="work-item">
+    <div class="work-image">
+      <img src="/assets/img/publication_preview/constitutional-ai.png" alt="Constitutional AI">
+    </div>
+    <div class="work-content">
+      <div class="work-header">
+        <div class="work-title">Constitutional AI: Harmlessness from AI Feedback</div>
+        <div class="work-links">
+          <a href="#" class="abstract-toggle" onclick="this.closest('.work-item').querySelector('.work-abstract').classList.toggle('show'); return false;">Abstract</a>
+          <a href="https://arxiv.org/pdf/2212.08073.pdf">Paper</a>
+        </div>
+      </div>
+      <div class="work-authors">Vincent Quirion, Sarah Lee, Raj Kumar</div>
+      <div class="work-description">We present a method for training AI assistants to be helpful, harmless, and honest using AI-generated feedback rather than human labels.</div>
+      <div class="work-abstract">Training AI systems to be helpful while avoiding harmful outputs typically requires extensive human feedback, which is expensive and difficult to scale. We introduce Constitutional AI (CAI), a method for training harmless AI assistants without human labels for harmlessness. Our approach uses a set of principles (a "constitution") to guide an AI in critiquing and revising its own outputs. We then use the AI's self-revised responses to train a preference model, which guides reinforcement learning. CAI-trained models are both more helpful and more harmless than models trained with human feedback alone, while requiring significantly less human annotation effort.</div>
+    </div>
+  </div>
+
+  <div class="work-item">
+    <div class="work-image">
+      <img src="/assets/img/publication_preview/emergent.png" alt="Emergent Abilities">
+    </div>
+    <div class="work-content">
+      <div class="work-header">
+        <div class="work-title">Emergent Abilities of Large Language Models</div>
+        <div class="work-links">
+          <a href="#" class="abstract-toggle" onclick="this.closest('.work-item').querySelector('.work-abstract').classList.toggle('show'); return false;">Abstract</a>
+          <a href="https://arxiv.org/abs/2206.07682">Paper</a>
+        </div>
+      </div>
+      <div class="work-authors">Vincent Quirion, James Anderson, Emma Williams</div>
+      <div class="work-description">We document emergent abilities—capabilities that appear suddenly at scale—in large language models, including arithmetic, multilingual translation, and reasoning.</div>
+      <div class="work-abstract">Scaling up language models has been shown to predictably improve performance on many NLP benchmarks. However, we find that certain capabilities emerge unpredictably—they are not present in smaller models but appear suddenly in larger ones. We call these "emergent abilities" and document over 100 examples across arithmetic, commonsense reasoning, multilingual tasks, and more. Emergence cannot be predicted by extrapolating the performance of smaller models. We analyze potential explanations including phase transitions in the loss landscape and threshold effects in task metrics. Our findings suggest that future large models may have capabilities that are difficult to anticipate.</div>
+    </div>
+  </div>
 </div>
