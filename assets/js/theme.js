@@ -263,24 +263,18 @@ let determineThemeSetting = () => {
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
 // "system", the computed theme is determined based on the user's system preference.
+// FORCED TO ALWAYS RETURN "light" FOR LIGHT MODE ONLY
 let determineComputedTheme = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    const userPref = window.matchMedia;
-    if (userPref && userPref("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    } else {
-      return "light";
-    }
-  } else {
-    return themeSetting;
-  }
+  // Always return "light" to force light mode for everyone
+  return "light";
 };
 
 let initTheme = () => {
-  let themeSetting = determineThemeSetting();
-
-  setThemeSetting(themeSetting);
+  // Force light mode by always setting theme to "light"
+  setThemeSetting("light");
+  
+  // Immediately apply light theme to prevent any flash
+  applyTheme();
 
   // Add event listener to the theme toggle button.
   document.addEventListener("DOMContentLoaded", function () {
@@ -289,6 +283,9 @@ let initTheme = () => {
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
+    
+    // Re-apply theme after DOM is loaded to ensure everything is styled
+    applyTheme();
   });
 
   // Add event listener to the system theme preference change.
