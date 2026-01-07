@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started working on continual post-training of open weights LLMs!
+Started working on LLM post-training!
