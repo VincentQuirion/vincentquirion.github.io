@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: '<a href="mailto:vincent.quirion@icloud.com" style="text-decoration: underline;">Email</a> | <a href="https://www.linkedin.com/in/vincent-quirion" style="text-decoration: underline;">LinkedIn</a> | <a href="/assets/VincentResumeML.pdf" target="_blank" style="text-decoration: underline;">1-Page Resume</a>'
+subtitle: '<a href="/go/?url=mailto%3Avincent.quirion%40icloud.com" style="text-decoration: underline;">Email</a> | <a href="/go/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fvincent-quirion" style="text-decoration: underline;">LinkedIn</a> | <a href="/go/?url=%2Fassets%2FVincentResumeML.pdf" target="_blank" style="text-decoration: underline;">1-Page Resume</a>'
 
 profile:
   align: right
